@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -63,6 +64,7 @@ fun Main( modifier: Modifier = Modifier) {
         LazyColumnExample(modifier)
         ColumnExample(modifier)
         TextFieldExample(modifier)
+        MiddleExample(modifier)
     }
 
 }
@@ -156,6 +158,46 @@ fun TextFieldExample(modifier: Modifier = Modifier) {
         )
     }
 }
+
+@Composable
+fun MiddleExample(modifier: Modifier = Modifier){
+    Row (
+        modifier = modifier.fillMaxSize(),
+        horizontalArrangement = Arrangement.Center,
+        verticalAlignment = Alignment.CenterVertically
+
+    ){
+        Image(
+            painter = painterResource(id = R.drawable.animal0),
+            contentDescription = "animal 0 ",
+            modifier = Modifier
+                .size(80.dp)
+                .clip(CircleShape),
+            alpha = 0.6f
+        )
+
+        Image(
+            painter = painterResource(id = R.drawable.animal1),
+            contentDescription = "animal 1 ",
+            modifier = Modifier
+                .size(80.dp)
+                .clip(CircleShape),
+            alpha = 0.6f
+        )
+
+
+        Image(
+            painter = painterResource(id = R.drawable.animal2),
+            contentDescription = "animal 2 ",
+            modifier = Modifier
+                .size(80.dp)
+                .clip(CircleShape),
+            alpha = 0.6f
+        )
+
+    }
+}
+
 
 
 
